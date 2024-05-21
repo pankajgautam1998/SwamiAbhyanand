@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import SlidePage from "../SlidePage";
 import Slider3 from "react-slick";
 import Slider4 from "react-slick";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   var settings4 = {
@@ -77,7 +78,7 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      <div className="lg:hidden relative">
+      <div className="lg:hidden relative  ">
         <img src="https://swamiabhyanand.com/uploads/_DSC2502.JPG" alt="" />
         <p className="absolute bottom-5 text-2xl text-white px-5 font-bold">
           परम् पूज्य आचार्य महामंडलेश्वर स्वामी अभयानन्द सरस्वती जी महाराज
@@ -119,9 +120,11 @@ const HomePage = () => {
         </p>
       </div>
       <div className="flex justify-center pt-2">
-        <button className="flex h-16 pt-4 border text-red-500 text-xl p-2 pl-8 w-[10rem] rounded border-red-600 hover:bg-red-500 hover:text-white">
-          Know More
-        </button>
+        <Link to="/about">
+          <button className="flex h-16 pt-4 border text-red-500 text-xl p-2 pl-8 w-[10rem] rounded border-red-600 hover:bg-red-500 hover:text-white">
+            Know More
+          </button>
+        </Link>
       </div>
       <div className="flex flex-col justify-center items-center max-lg:hidden">
         <img
@@ -340,10 +343,12 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center pt-2">
-        <button className="flex h-16 pt-4 border text-red-500 text-xl p-2 pl-8 w-[10rem] rounded border-red-600 hover:bg-red-500 hover:text-white">
-          Read All
-        </button>
+      <div className="flex justify-center pt-5">
+        <Link to="/blog">
+          <button className="flex h-16 pt-4 border text-red-500 text-xl p-2 pl-8 w-[10rem] rounded border-red-600 hover:bg-red-500 hover:text-white">
+            Read All
+          </button>
+        </Link>
       </div>
       <div className="flex flex-col justify-center items-center max-lg:hidden">
         <img
@@ -453,7 +458,7 @@ const HomePage = () => {
             </Slider3>
             <div className="grid justify-center text-4xl items-center">
               <p>स्वामी अभयानंद गौशाला समिति</p>
-              <p className="text-xl w-[25rem] pt-10">
+              <p className="text-xl w-full pt-10">
                 गौ रक्षा मानव समाज के लिए आवश्यक है। यहाँ तक कि स्वयं भगवान
                 कृष्ण भी कहते हैं कि गायें उन्हें विशेष रूप से प्रिय हैं, वे
                 गोपाल और गोविंदा के रूप में जाने जाते हैं और वृंदावन में गाय
@@ -510,7 +515,7 @@ const HomePage = () => {
               </Slider4>
               <div className="grid  justify-center text-4xl">
                 <p>स्वामी अभयानंद संस्कृत विद्यालय</p>
-                <p className="text-xl w-[20rem] text-center pt-10">
+                <p className="text-xl w-full text-center pt-10">
                   स्वामी अभ्यानंद वेद पाठशाला के अन्तर्गत 3 आचार्य एवं 21
                   विद्यार्थी वर्तमान में शुक्लयजुर्वेद, व्याकरण व आधुनिक शिक्षा
                   भी प्राप्त करते है। साथ ही साथ स्वामी जी के प्रवचनों को पुस्तक

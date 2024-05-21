@@ -201,15 +201,23 @@ const Gallery = () => {
         <p className="text-4xl font-bold">Gallery</p>
       </div>
 
-      <div className="max-lg:hidden border border-gray-500 shadow-xl shadow-gray-700 m-[10%] flex flex-col items-center px-5 justify-center">
+      <div className=" max-lg:hidden border border-gray-500 shadow-lg shadow-gray-700 m-[10%] flex flex-col items-center px-5 justify-center">
         <button>
-          <button className="border shadow-orange-500 shadow-2xl p-2 w-14 text-xl">
+          <button className="border border-orange-300 shadow-sm shadow-orange-400 p-2  w-14">
             All
           </button>
-          <button>LUCKNOW ASHRAM</button>
-          <button>MEERUT ASHRAM</button>
-          <button>HARIDWAR ASHRAM</button>
-          <button>MAHOLI SITAPUR ASHRAM</button>
+          <button className="border p-2 m-2 border-orange-300 shadow-sm shadow-orange-400">
+            LUCKNOW ASHRAM
+          </button>
+          <button className="border p-2 m-2 border-orange-300 shadow-sm shadow-orange-400">
+            MEERUT ASHRAM
+          </button>
+          <button className="border p-2 m-2 border-orange-300 shadow-sm shadow-orange-400">
+            HARIDWAR ASHRAM
+          </button>
+          <button className="border p-2 m-2 border-orange-300 shadow-sm shadow-orange-400">
+            MAHOLI SITAPUR ASHRAM
+          </button>
         </button>
 
         <div className="grid grid-cols-3 gap-5">
@@ -229,13 +237,15 @@ const Gallery = () => {
       </div>
       <div className="lg:hidden border border-gray-500 shadow-xl shadow-gray-700 m-[10%] flex flex-col  px-5 ">
         <div className="flex !justify-between">
-          <p className=" shadow-sm shadow-orange-500  p-2 text-xl mt-5">All</p>
+          <p className=" shadow-sm shadow-orange-500  p-2 text-xl mt-5 border ">
+            All
+          </p>
           <p className="border p-2 rounded mt-5">
             <Menu />
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 pt-10">
+        <div className="grid grid-cols-1 gap-5 pt-10 pl-8">
           {data.map((event, index) => {
             return (
               <div>

@@ -15,7 +15,7 @@ import React from "react";
 const Event = () => {
   return (
     <>
-      <div className="max-lg:hidden px-[10rem] pb-5 border border-gray-700 m-[10%] p-2">
+      <div className="max-lg:hidden px-[10rem] pb-5 border border-gray-700 m-[10%] p-2 shadow-sm:5px 10px 8px 10px ">
         <div className="flex justify-between ">
           <input
             type="text"
@@ -41,7 +41,7 @@ const Event = () => {
         <p className="flex justify-center font-bold text-2xl pt-10">
           Latest Past Events
         </p>
-        <div className="grid grid-cols-2 justify-between  border border-gray-600 p-4 ">
+        <div className="grid grid-cols-2 justify-between  border border-gray-600 p-4 shadow-2xl">
           <div>
             <p className="text-2xl">सदगुरुदेव प्राकट्य दिवस</p>
             <p className="text-xl pt-5">
@@ -84,7 +84,7 @@ const Event = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 justify-between  border border-gray-600 p-4">
+        <div className="grid grid-cols-2 justify-between  border border-gray-600 p-4 mt-3 shadow-2xl">
           <div>
             <p className="text-2xl">गुरु पूर्णिमा 2023</p>
             <p className="text-xl pt-5">
@@ -130,7 +130,7 @@ const Event = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 justify-between   border border-gray-600 p-4">
+        <div className="grid grid-cols-2 justify-between   border border-gray-600 p-4 mt-3 shadow-2xl ">
           <div>
             <p className="text-2xl">गीता ज्ञान यज्ञ समारोह</p>
             <p className="text-xl pt-5">

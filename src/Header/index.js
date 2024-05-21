@@ -1,37 +1,61 @@
 import { Menu } from "@mui/icons-material";
+import { List, ListItem } from "@mui/material";
 import React, { useState } from "react";
-import { Drawer } from "@mui/material";
+
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const handleclick = () => {
+    setOpen(!open);
+  };
   return (
     <>
-      <div className="max-lg:hidden bg-orange-400 text-white font-bold flex justify-between px-[10rem] h-10 items-center text-xl ">
+      <div className="max-lg:hidden bg-orange-500 text-white font-bold flex justify-between px-[10rem] h-10 items-center text-xl shadow-xl shadow-orange-600">
         <p>Email: swamiabhyanand@gmail.com</p>
         <p>Call Now! 8881810100</p>
       </div>
-      <div className=" lg:hidden flex bg-orange-500 text-white h-16 justify-between font-bold px-5">
+      <div className=" lg:hidden flex bg-orange-500 text-white h-16 justify-between font-bold px-5 shadow-xl shadow-orange-600 ">
         <p className="pt-1">Email: swamiabhyanand@gmail.com</p>
         <p className="pt-8">Call Now! 8881810100</p>
       </div>
-      <div className="lg:hidden flex justify-between items-center px-5">
+      <div className="lg:hidden flex justify-between items-center px-10 pt-3">
         <img src="https://swamiabhyanand.com/images/cropped-logo.png" alt="" />
-        <p onClick={() => setOpen(true)}>
-          <Menu />
+        <p onClick={handleclick} onClose={handleclick}>
+          <Menu className="border border-orange-400 !size-16 rounded p-2" />
         </p>
-        <Drawer anchor="bottom" open={open} onClose={() => setOpen(false)}>
-          <button>Home</button>
-          <button>About</button>
-          <button>Blog</button>
-          <button>Gallery</button>
-          <button>Donate</button>
-          <button>Event</button>
-          <button>E-Books</button>
-          <button>Contact Us</button>
-        </Drawer>
       </div>
-      <div className="flex justify-between px-[11rem] max-lg:hidden">
+      <div className="lg:hidden px-5">
+        {open && (
+          <List className="flex flex-col justify-start fixed">
+            <Link to="/">
+              <ListItem className="text-xl">Home</ListItem>
+            </Link>
+            <Link to="/about">
+              <ListItem className="text-xl text-gray-400">About</ListItem>
+            </Link>
+            <Link to="/blog">
+              <ListItem className="text-xl text-gray-400">Blog</ListItem>
+            </Link>
+            <Link to="/gallery">
+              <ListItem className="text-xl text-gray-400">Gallery</ListItem>
+            </Link>
+            <Link to="/donate">
+              <ListItem className="text-xl text-gray-400">Donate</ListItem>
+            </Link>
+            <Link to="/event">
+              <ListItem className="text-xl text-gray-400">Event</ListItem>
+            </Link>
+            <Link to="/ebook">
+              <ListItem className="text-xl text-gray-400">E-Books</ListItem>
+            </Link>
+            <Link to="/contactus">
+              <ListItem className="text-xl text-gray-400">Contact Us</ListItem>
+            </Link>
+          </List>
+        )}
+      </div>
+      <div className="flex justify-between px-[11rem] max-lg:hidden ">
         <img
           src="https://swamiabhyanand.com/images/cropped-logo.png"
           alt=""

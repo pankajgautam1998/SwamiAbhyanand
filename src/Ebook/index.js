@@ -90,7 +90,7 @@ const Ebook = () => {
         <img src="https://swamiabhyanand.com/images/cropped-logo.png" alt="" />
         <p className="pt-2 text-2xl font-bold">E-Books</p>
       </div>
-      <div className=" gap-5 grid grid-cols-3  px-[10rem] pt-5 pb-5">
+      <div className="max-lg:hidden gap-5 grid grid-cols-3  px-[10rem] pt-5 pb-5">
         {data.map((i, index) => {
           return (
             <div className="overflow-y-auto h-96">
@@ -102,6 +102,25 @@ const Ebook = () => {
                 <p className="text-cyan-900 font-bold text-xl w-[20rem]">
                   {i.p3}
                 </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="lg:hidden gap-5 grid grid-cols-1 px-[10rem] ">
+        {data.map((i, index) => {
+          return (
+            <div className="overflow-y-auto h-96">
+              <div className="border border-gray-400 border-r-8 px-5 gap-2">
+                <img src={i.image} alt="" className="h-[20rem]" />
+                <div>
+                  <p className="text-cyan-950 font-bold text-4xl">{i.oops}</p>
+                  <p className="text-cyan-900 font-bold text-xl">{i.p1}</p>
+                  <p className="w-[20rem]">{i.p2}</p>
+                  <p className="text-cyan-900 font-bold text-xl w-[20rem]">
+                    {i.p3}
+                  </p>
+                </div>
               </div>
             </div>
           );
