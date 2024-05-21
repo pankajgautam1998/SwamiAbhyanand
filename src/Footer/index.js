@@ -7,44 +7,57 @@ import {
   Phone,
   Twitter,
 } from "@mui/icons-material";
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  });
   return (
     <>
       <div className="flex justify-between px-5 gap-8 max-lg:hidden">
         <div className="bg-orange-400 w-[33%] h-[12rem]  text-white">
-          <div className="flex flex-col justify-center items-center text-2xl">
-            <img
-              src="https://swamiabhyanand.com/images/about-icon1.png"
-              alt=""
-              className="pt-6"
-            />
-            <button className="font-bold pt-5">ABOUT</button>
-            <p className="pt-8">About Swami Abhyanand Ji</p>
-          </div>
+          <Link to="/about">
+            <div className="flex flex-col justify-center items-center text-2xl">
+              <img
+                src="https://swamiabhyanand.com/images/about-icon1.png"
+                alt=""
+                className="pt-6"
+              />
+              <button className="font-bold pt-5">ABOUT</button>
+              <p className="pt-8">About Swami Abhyanand Ji</p>
+            </div>
+          </Link>
         </div>
         <div className="bg-orange-700 text-white w-[33%] h-[12rem] ">
-          <div className="flex flex-col justify-center items-center text-2xl">
-            <img
-              src="https://swamiabhyanand.com/images/media-icon2.png"
-              alt=""
-              className="pt-6"
-            />
-            <button className="font-bold pt-5">EVENTS</button>
-            <p className="pt-8">Swami Abhyanand Ji Events</p>
-          </div>
+          <Link to="/event">
+            <div className="flex flex-col justify-center items-center text-2xl">
+              <img
+                src="https://swamiabhyanand.com/images/media-icon2.png"
+                alt=""
+                className="pt-6"
+              />
+              <button className="font-bold pt-5">EVENTS</button>
+              <p className="pt-8">Swami Abhyanand Ji Events</p>
+            </div>
+          </Link>
         </div>
         <div className="bg-orange-400 text-white w-[33%] h-[12rem]">
-          <div className="flex flex-col justify-center items-center text-2xl">
-            <img
-              src="https://swamiabhyanand.com/images/blog-icon3.png"
-              alt=""
-              className="pt-6"
-            />
-            <button className="font-bold pt-5">BLOG</button>
-            <p className="pt-8">Swami Abhyanand Ji Blog</p>
-          </div>
+          <Link to="/blog">
+            <div className="flex flex-col justify-center items-center text-2xl">
+              <img
+                src="https://swamiabhyanand.com/images/blog-icon3.png"
+                alt=""
+                className="pt-6"
+              />
+              <button className="font-bold pt-5">BLOG</button>
+              <p className="pt-8">Swami Abhyanand Ji Blog</p>
+            </div>
+          </Link>
         </div>
       </div>
       <div className="lg:hidden px-5 pt-5">
