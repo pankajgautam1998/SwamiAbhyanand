@@ -1,5 +1,5 @@
 import { Menu } from "@mui/icons-material";
-import { List, ListItem } from "@mui/material";
+import { Collapse, List, ListItem } from "@mui/material";
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
@@ -21,12 +21,15 @@ const Header = () => {
       </div>
       <div className="lg:hidden flex justify-between items-center px-10 pt-3">
         <img src="https://swamiabhyanand.com/images/cropped-logo.png" alt="" />
-        <p onClick={handleclick} onClose={handleclick}>
-          <Menu className="border border-orange-400 !size-16 rounded p-2" />
-        </p>
+        <button
+          onClick={handleclick}
+          className="border border-orange-400 !size-16 rounded p-2"
+        >
+          <Menu />
+        </button>
       </div>
       <div className="lg:hidden px-5">
-        {open && (
+        <Collapse in={open}>
           <List className="flex flex-col justify-start fixed">
             <Link to="/">
               <ListItem className="text-xl">Home</ListItem>
@@ -53,7 +56,7 @@ const Header = () => {
               <ListItem className="text-xl text-gray-400">Contact Us</ListItem>
             </Link>
           </List>
-        )}
+        </Collapse>
       </div>
       <div className="flex justify-between px-[11rem] max-lg:hidden ">
         <img
