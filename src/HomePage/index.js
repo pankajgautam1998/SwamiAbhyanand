@@ -392,7 +392,7 @@ const HomePage = () => {
       </div>
       <div className="lg:hidden">
         <iframe
-          className="flex flex-col items-center px-5"
+          className="flex flex-col items-center px-5 lg:w-[560px] w-[400px]"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/AjP8FtHExlA?si=bjjKvbXCMnNbdRQH"

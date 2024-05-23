@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
         {children}
         <Footer />
         <div>
-          <div className="fixed grid right-0 top-96  p-2 font-bold rounded bg-gradient-to-r from-orange-300 to-emerald-300">
+          <div className=" fixed grid right-0 top-96  p-2 font-bold rounded bg-gradient-to-r from-orange-300 to-emerald-300">
             <p>LATEST EVENTS</p>
             <p>
               नवीनतम कार्यक्रम
